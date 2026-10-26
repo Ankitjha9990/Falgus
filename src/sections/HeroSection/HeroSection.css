@@ -320,6 +320,14 @@
 }
 
 @media (max-width: 600px) {
+  .hero__inner {
+    text-align: left;
+  }
+
+  .hero__subheading {
+    margin-inline: 0;
+  }
+
   .story-modal__backdrop {
     padding: 1rem;
   }

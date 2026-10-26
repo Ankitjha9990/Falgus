@@ -89,3 +89,13 @@
     margin-inline: auto;
   }
 }
+
+@media (max-width: 600px) {
+  .problem__inner {
+    text-align: left;
+  }
+
+  .problem__body {
+    margin-inline: 0;
+  }
+}

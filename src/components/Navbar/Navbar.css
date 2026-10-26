@@ -279,6 +279,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .navbar__mobile-link {
+    text-align: left;
+  }
+}
+
 @keyframes navMobileFadeIn {
   from {
     opacity: 0;
