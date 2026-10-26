@@ -1,0 +1,256 @@
+/* ===================================================================
+   MODEL SECTION — The Falgu Model
+   3 Stages with individual visual assets and responsive connectors
+=================================================================== */
+
+.model {
+  padding: var(--section-py) 0;
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Decorative foliage and mushrooms ── */
+.model__deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.model__deco--leaf {
+  bottom: 0;
+  left: 0;
+  width: clamp(120px, 14vw, 240px);
+  opacity: 0.85;
+}
+
+.model__deco--mushrooms {
+  bottom: -1rem;
+  right: -1rem;
+  width: clamp(160px, 18vw, 320px);
+  opacity: 0.85;
+}
+
+.model__container {
+  position: relative;
+  z-index: 1;
+}
+
+.model__heading {
+  margin: var(--space-4) 0;
+  font-size: clamp(2.2rem, 4.2vw, 4.25rem);
+}
+
+.model__sub {
+  max-width: 52ch;
+  margin-bottom: var(--space-8);
+}
+
+/* ── Flow container ── */
+.model__flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.model__step-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.model__step-wrapper:last-child {
+  flex: 0 1 auto;
+  width: calc((100% - 2 * 60px) / 3);
+}
+
+/* ── Individual Stage Card ── */
+.model__stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.model__stage-media {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.model__stage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.model__stage:hover .model__stage-img {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* ── Stage Info / Label ── */
+.model__stage-info {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 320px;
+}
+
+.model__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-nav);
+  font-size: var(--text-base);
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 60, 100, 0.20);
+}
+
+.model__stage-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.model__stage-title {
+  color: var(--color-navy);
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: var(--space-1);
+}
+
+.model__stage-sub {
+  color: var(--color-body-muted);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+
+/* ── Connectors & Arrows ── */
+.model__connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0 var(--space-3);
+  margin-top: calc(-1 * var(--space-8));
+}
+
+.model__arrow {
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+.model__arrow--desktop {
+  width: clamp(40px, 4.5vw, 72px);
+  height: auto;
+}
+
+.model__arrow--mobile {
+  display: none;
+}
+
+/* ─── RESPONSIVE LAYOUT ─────────────────────────────────────────── */
+@media (max-width: 992px) and (min-width: 861px) {
+  .model__stage-media {
+    max-width: 260px;
+  }
+  .model__arrow--desktop {
+    width: 36px;
+  }
+}
+
+@media (max-width: 860px) {
+  .model__flow {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    max-width: 440px;
+  }
+
+  .model__step-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: auto;
+  }
+
+  .model__step-wrapper:last-child {
+    width: 100%;
+  }
+
+  .model__stage {
+    align-items: center;
+  }
+
+  .model__stage-media {
+    max-width: 280px;
+    margin-bottom: var(--space-4);
+  }
+
+  .model__stage-info {
+    max-width: 280px;
+    justify-content: flex-start;
+  }
+
+  .model__connector {
+    margin: var(--space-4) 0;
+    padding: 0;
+  }
+
+  .model__arrow--desktop {
+    display: none;
+  }
+
+  .model__arrow--mobile {
+    display: block;
+    width: clamp(28px, 6vw, 36px);
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .model__stage-media {
+    max-width: 240px;
+  }
+
+  .model__stage-info {
+    max-width: 240px;
+  }
+
+  .model__num {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: var(--text-sm);
+  }
+
+  .model__stage-title {
+    font-size: 1.15rem;
+  }
+
+  .model__stage-sub {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,143 @@
+/* Shared Falgu design tokens used across all components. */
+
+:root {
+  /* ─── COLORS ─────────────────────────────────────────────────── */
+
+  /* Primary navy — headlines, primary buttons, numbered markers */
+  --color-navy:            #003C64;
+  --color-navy-alt:        #06436D;
+
+  /* Brand green — emphasis words, eyebrows, icons, accents */
+  --color-green:           #4C7D3D;
+  --color-green-dark:      #3A6B2E;
+
+  /* Warm off-white canvas — page background */
+  --color-bg:              #F7F6F4;
+  --color-bg-alt:          #F0EEE9;
+
+  /* Muted blue-grey — supporting copy (contrast ratio 5.64:1 on #F7F6F4, WCAG AA compliant) */
+  --color-body-muted:      #50647A;
+  --color-body-dark:       #4A5568;
+
+  /* Deep navy — footer */
+  --color-footer-bg:       #06446A;
+  --color-footer-bg-dark:  #053D60;
+
+  /* Pale green — blobs, icon backgrounds, accents */
+  --color-pale-green:      rgba(76, 125, 61, 0.10);
+  --color-pale-green-icon: rgba(76, 125, 61, 0.15);
+
+  /* Cyan/blue — image outlines, arrows, model connectors */
+  --color-cyan:            #4FC3F7;
+  --color-cyan-light:      rgba(79, 195, 247, 0.40);
+
+  /* White / glass surfaces */
+  --color-white:           #FFFFFF;
+  --color-glass-navbar:    rgba(247, 246, 244, 0.72);
+  --color-glass-form:      rgba(255, 255, 255, 0.48);
+  --color-glass-border:    rgba(255, 255, 255, 0.60);
+
+  /* Input surface (contact form) */
+  --color-input-bg:        rgba(255, 255, 255, 0.88);
+  --color-input-border:    rgba(3, 60, 100, 0.18);
+
+  /* Trust strip / benefit strip */
+  --color-strip-bg:        rgba(255, 255, 255, 0.92);
+  --color-strip-border:    rgba(0, 60, 100, 0.08);
+
+  /* ─── TYPOGRAPHY ─────────────────────────────────────────────── */
+
+  /* Display font */
+  --font-display:  'Alexandria', 'Montserrat', system-ui, sans-serif;
+
+  /* Body / supporting copy */
+  --font-body:     'Alexandria', 'Raleway', system-ui, sans-serif;
+
+  /* Navigation / compact utility labels */
+  --font-nav:      'Alexandria', 'Montserrat', system-ui, sans-serif;
+
+  /* Handwritten annotation (seasonal timeline) */
+  --font-hand:     'Kalam', cursive;
+
+  /* ─── TYPE SCALE ─────────────────────────────────────────────── */
+  --text-xs:       0.75rem;    /* 12px */
+  --text-sm:       0.875rem;   /* 14px */
+  --text-base:     1rem;       /* 16px */
+  --text-md:       1.125rem;   /* 18px */
+  --text-lg:       1.25rem;    /* 20px */
+  --text-xl:       1.5rem;     /* 24px */
+  --text-2xl:      2rem;       /* 32px */
+  --text-3xl:      2.75rem;    /* 44px */
+  --text-4xl:      3.5rem;     /* 56px */
+  --text-5xl:      4.25rem;    /* 68px */
+
+  /* Fluid display headline: scales from 3rem → 5.5rem */
+  --text-hero:     clamp(2.8rem, 3.5vw, 5.5rem);
+  --text-section:  clamp(2.1rem, 4.2vw, 4.25rem);
+
+  /* ─── LINE HEIGHTS ───────────────────────────────────────────── */
+  --lh-tight:      1.10;
+  --lh-snug:       1.25;
+  --lh-normal:     1.55;
+  --lh-relaxed:    1.70;
+
+  /* ─── LETTER SPACING ─────────────────────────────────────────── */
+  --ls-eyebrow:    0.12em;    /* uppercase section labels */
+  --ls-nav:        0.03em;
+
+  /* ─── BORDER RADIUS ──────────────────────────────────────────── */
+  --radius-xs:     4px;
+  --radius-sm:     8px;
+  --radius-md:     14px;
+  --radius-lg:     24px;
+  --radius-xl:     32px;
+  --radius-pill:   100px;
+  --radius-circle: 50%;
+
+  /* Organic image mask radius */
+  --radius-image:  40% 50% 45% 55% / 45% 40% 60% 50%;
+
+  /* ─── SPACING ────────────────────────────────────────────────── */
+  --space-1:    0.25rem;
+  --space-2:    0.5rem;
+  --space-3:    0.75rem;
+  --space-4:    1rem;
+  --space-5:    1.25rem;
+  --space-6:    1.5rem;
+  --space-8:    2rem;
+  --space-10:   2.5rem;
+  --space-12:   3rem;
+  --space-16:   4rem;
+  --space-20:   5rem;
+  --space-24:   6rem;
+  --space-32:   8rem;
+
+  /* Section vertical padding */
+  --section-py:  clamp(4rem, 8vw, 7rem);
+
+  /* ─── LAYOUT ─────────────────────────────────────────────────── */
+  --content-max:  1680px;
+  --content-px:   clamp(1.25rem, 5.5vw, 6rem);
+
+  /* Navbar */
+  --nav-height:       78px;
+  --nav-bg:           #FFFFFF;
+  --nav-blur:         16px;
+  --nav-border-color: rgba(255, 255, 255, 0.55);
+
+  /* ─── SHADOWS ────────────────────────────────────────────────── */
+  --shadow-sm:    0 1px 4px rgba(0, 60, 100, 0.08);
+  --shadow-md:    0 4px 20px rgba(0, 60, 100, 0.12);
+  --shadow-lg:    0 8px 40px rgba(0, 60, 100, 0.16);
+  --shadow-glass: 0 4px 32px rgba(0, 60, 100, 0.10), 0 1px 0 rgba(255,255,255,0.60) inset;
+
+  /* ─── ANIMATION ──────────────────────────────────────────────── */
+  --duration-fast:   180ms;
+  --duration-base:   300ms;
+  --duration-slow:   500ms;
+  --duration-reveal: 700ms;
+
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.4, 0, 1, 1);
+  --ease-inout: cubic-bezier(0.4, 0, 0.2, 1);
+}
